@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#A83A20">
+<title>단양 한스빌리지 가족 캠핑 🏕️ 2026.11.13–15</title>
+<meta name="description" content="우리 가족의 단양 한스빌리지 2박 3일 캠핑 가이드 — 날씨 전략, 일정표, 체크리스트, 명소와 맛집">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --maple:#A83A20;       /* 단풍 레드/버건디 테라코타 */
+  --maple-deep:#782512;
+  --amber:#D96B27;       /* 모닥불 불꽃 앰버 */
+  --gold:#C88B2C;        /* 가을 숲 황금빛 */
+  --amber-soft:#FDF2E9;  /* 앰버 소프트 배경 */
+  --forest:#2B3D30;      /* 가을 전나무 숲 딥그린 */
+  --forest-deep:#1D2B22;
+  --forest-soft:#3D5243;
+  --green-mid:#55755A;
+  --green-light:#EBF0E6;
+  --sand:#FAF5ED;        /* 따스한 가을 크림빛 */
+  --sand-deep:#EFE4D2;
+  --charcoal:#2E2722;    /* 따뜻한 다크 브라운 */
+  --ink:#352E29;         /* 가을 웜 잉크 */
+  --muted:#827971;       /* 가을 웜 그레이 */
+  --accent:var(--amber);
+  --accent-soft:var(--amber-soft);
+  --rain:#5E8399;
+  --card:#FFFFFF;
+  --radius:18px;
+  --shadow:0 3px 12px rgba(90,45,20,.07), 0 10px 28px rgba(90,45,20,.05);
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Pretendard Variable",Pretendard,-apple-system,sans-serif;
+  background-color:var(--sand);
+  background-image:
+    radial-gradient(ellipse at top, rgba(217,107,39,.06) 0%, transparent 60%),
+    radial-gradient(circle at 12% 18%, rgba(168,58,32,.04) 0%, transparent 40%),
+    radial-gradient(circle at 88% 65%, rgba(200,139,44,.04) 0%, transparent 40%);
+  background-attachment:fixed;
+  color:var(--ink);
+  line-height:1.6;
+  padding-bottom:88px; /* 탭바 공간 */
+}
+.wrap{max-width:520px;margin:0 auto;padding:0 16px}
+
+/* ── 히어로 ── */
+header.hero{
+  background:
+    linear-gradient(180deg, rgba(28,20,16,.45) 0%, rgba(28,20,16,.75) 50%, rgba(20,15,12,.92) 100%),
+    url("hero-autumn.jpg") center center/cover no-repeat;
+  color:#FAF6EE;
+  padding:48px 20px 36px;
+  border-radius:0 0 28px 28px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 10px 30px rgba(90,40,15,.18);
+}
+header.hero::after{
+  content:"🍁";position:absolute;font-size:110px;opacity:.12;right:-14px;bottom:-24px;transform:rotate(-8deg);pointer-events:none;
+}
+.hero .badge{
+  display:inline-block;background:rgba(217,107,39,.35);border:1px solid rgba(246,220,190,.45);
+  color:#FFF1E0;border-radius:999px;padding:4px 12px;font-size:12px;letter-spacing:.04em;margin-bottom:12px;
+  backdrop-filter:blur(4px);
+}
+.hero h1{font-size:26px;font-weight:800;line-height:1.3;letter-spacing:-.02em}
+.hero h1 small{display:block;font-size:14px;font-weight:500;color:#CBD6C5;margin-top:6px}
+.hero .crew{
+  margin-top:16px;display:flex;gap:8px;flex-wrap:wrap;font-size:13px;
+}
+.hero .crew span{background:rgba(246,243,234,.12);border-radius:999px;padding:5px 12px}
+
+/* ── 섹션 공통 ── */
+section{padding:26px 0 6px}
+.sec-head{display:flex;align-items:baseline;gap:8px;margin-bottom:14px}
+.sec-head .no{
+  font-size:11px;font-weight:800;color:#fff;
+  background:linear-gradient(135deg,var(--maple),var(--amber));
+  border-radius:8px;padding:2px 8px;letter-spacing:.05em;
+  box-shadow:0 2px 6px rgba(168,58,32,.25);
+}
+.sec-head h2{font-size:19px;font-weight:800;letter-spacing:-.02em}
+.sec-head .sub{font-size:12px;color:var(--muted);margin-left:auto}
+
+/* ── 날씨 카드 ── */
+.wx-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.wx{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:16px 16px 14px;border-top:4px solid var(--green-mid);
+}
+.wx.rain{border-top-color:var(--rain)}
+.wx.sun{border-top-color:var(--accent)}
+.wx .day{display:flex;align-items:center;gap:8px;font-weight:800;font-size:15px}
+.wx .day .ico{font-size:22px}
+.wx .tag{
+  margin-left:auto;font-size:11px;font-weight:700;border-radius:999px;padding:3px 10px;
+  background:var(--green-light);color:var(--forest);
+}
+.wx.rain .tag{background:#E3EDF2;color:#41637A}
+.wx.sun .tag{background:var(--accent-soft);color:#A45B25}
+.wx .nums{display:flex;align-items:center;gap:14px;margin:10px 0 8px}
+.wx .nums .big{font-size:34px;font-weight:800;letter-spacing:-.03em}
+.wx .nums .big em{font-style:normal;font-size:16px;color:var(--muted);font-weight:600}
+.wx .nums .meta{font-size:12.5px;color:var(--muted);line-height:1.5}
+.wx .strategy{
+  background:var(--sand);border-radius:12px;padding:10px 12px;font-size:13px;
+  color:var(--charcoal);
+}
+.wx .strategy b{color:var(--forest)}
+.wx-rain-note{
+  margin-top:12px;font-size:12px;color:var(--muted);display:flex;gap:6px;align-items:flex-start;
+}
+
+/* ── 타임라인 ── */
+.day-tabs{display:flex;gap:8px;margin-bottom:16px}
+.day-tabs button{
+  flex:1;border:none;background:var(--card);border-radius:12px;padding:10px 4px;
+  font-family:inherit;font-size:13px;font-weight:700;color:var(--muted);
+  box-shadow:var(--shadow);cursor:pointer;transition:.2s;
+}
+.day-tabs button.on{background:linear-gradient(135deg,var(--maple),var(--amber));color:#FAF6EE;box-shadow:0 4px 14px rgba(168,58,32,.28)}
+.day-tabs button small{display:block;font-size:11px;font-weight:500;opacity:.8}
+.tl{position:relative;padding-left:24px}
+.tl::before{
+  content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(var(--amber),var(--sand-deep));
+  border-radius:2px;
+}
+.tl .item{position:relative;padding:0 0 18px 8px}
+.tl .item::before{
+  content:"";position:absolute;left:-22px;top:6px;width:12px;height:12px;border-radius:50%;
+  background:var(--card);border:3px solid var(--amber);
+}
+.tl .item.rainy::before{border-color:var(--rain)}
+.tl .item.sunny::before{border-color:var(--gold)}
+.tl .time{
+  font-size:12px;font-weight:800;color:var(--maple);letter-spacing:.02em;
+}
+.tl .item.rainy .time{color:var(--rain)}
+.tl h4{font-size:15px;font-weight:800;margin:2px 0 4px}
+.tl p{font-size:13.5px;color:var(--muted)}
+.tl .chip{
+  display:inline-block;font-size:11px;font-weight:700;background:var(--green-light);
+  color:var(--forest);border-radius:999px;padding:2px 9px;margin-top:6px;margin-right:4px;
+}
+
+/* ── 체크리스트 ── */
+.progress-wrap{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:14px 16px;margin-bottom:14px;display:flex;align-items:center;gap:12px;
+}
+.progress-bar{flex:1;height:10px;background:var(--green-light);border-radius:99px;overflow:hidden}
+.progress-bar > div{
+  height:100%;width:0%;background:linear-gradient(90deg,var(--amber),var(--maple));
+  border-radius:99px;transition:width .35s ease;
+}
+.progress-num{font-size:13px;font-weight:800;color:var(--maple);white-space:nowrap}
+.reset-btn{
+  border:none;background:none;font-family:inherit;font-size:12px;color:var(--muted);
+  text-decoration:underline;cursor:pointer;
+}
+.ck-cat{margin-bottom:16px}
+.ck-cat > h3{
+  font-size:14px;font-weight:800;color:var(--forest);margin-bottom:8px;
+  display:flex;align-items:center;gap:6px;
+}
+.ck{
+  display:flex;align-items:flex-start;gap:10px;background:var(--card);
+  border-radius:12px;padding:11px 14px;box-shadow:var(--shadow);margin-bottom:7px;
+  cursor:pointer;transition:.15s;border:1.5px solid transparent;
+}
+.ck:active{transform:scale(.985)}
+.ck input{display:none}
+.ck .box{
+  width:21px;height:21px;border-radius:7px;border:2px solid var(--sand-deep);
+  flex-shrink:0;margin-top:2px;display:grid;place-items:center;font-size:13px;color:transparent;
+  transition:.15s;background:#fff;
+}
+.ck input:checked + .box{background:linear-gradient(135deg,var(--maple),var(--amber));border-color:var(--maple);color:#fff}
+.ck .label{font-size:14px;flex:1}
+.ck .label small{display:block;font-size:12px;color:var(--muted)}
+.ck input:checked ~ .label{color:#A9AC9E;text-decoration:line-through}
+
+/* ── 일정 태그 ── */
+.plan-tag{
+  display:inline-flex;align-items:center;gap:3px;
+  font-size:11px;font-weight:800;border-radius:6px;padding:2px 7px;
+  vertical-align:middle;letter-spacing:-.01em;
+}
+.plan-tag.on{background:linear-gradient(135deg,var(--maple),var(--amber));color:#fff;box-shadow:0 1px 4px rgba(168,58,32,.25)}
+.plan-tag.opt{background:#FFF3EB;color:#D96B27;border:1px solid rgba(217,107,39,.3)}
+.plan-tag.sub{background:#E8F3EE;color:#2D6A4F;border:1px solid rgba(45,106,79,.25)}
+.plan-tag.off{background:#F1EFEA;color:#7A7265;border:1px solid rgba(122,114,101,.2)}
+
+/* ── 명소 ── */
+.spot{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:16px;margin-bottom:12px;display:flex;gap:14px;
+}
+.spot .emo{
+  width:46px;height:46px;border-radius:14px;background:var(--green-light);
+  display:grid;place-items:center;font-size:24px;flex-shrink:0;
+}
+.spot h3{font-size:15px;font-weight:800;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.spot h3 .pill{
+  font-size:10.5px;font-weight:700;border-radius:999px;padding:2px 8px;
+  background:var(--accent-soft);color:#A45B25;
+}
+.spot h3 .pill.rain{background:#E3EDF2;color:#41637A}
+.spot p{font-size:13px;color:var(--muted);margin-top:4px}
+
+/* ── 맛집 ── */
+.food{
+  background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:14px 16px;margin-bottom:8px;display:flex;align-items:flex-start;gap:12px;
+}
+.food .emo{font-size:22px;flex-shrink:0;margin-top:2px}
+.food b{font-size:14.5px}
+.food span{font-size:12.5px;color:var(--muted);display:block}
+.tip{
+  background:linear-gradient(135deg,#FFF7EE,#FBE9D3);
+  border:1.5px dashed var(--accent);border-radius:var(--radius);
+  padding:14px 16px;font-size:13.5px;margin-top:14px;
+}
+.tip b{color:#A45B25}
+
+/* ── 링크 버튼 스타일 ── */
+.links-row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.btn-link{
+  display:inline-flex;align-items:center;gap:4px;font-size:11.5px;font-weight:700;
+  padding:5px 10px;border-radius:8px;text-decoration:none;transition:.15s;line-height:1.2;
+}
+.btn-link:active{transform:scale(.96)}
+.btn-link.naver{background:#EAF7EE;color:#03C75A;border:1px solid rgba(3,199,90,.25)}
+.btn-link.official{background:var(--green-light);color:var(--forest);border:1px solid rgba(44,58,47,.2)}
+.btn-link.blog{background:#FFF4E8;color:#D98E5A;border:1px solid rgba(217,142,90,.25)}
+
+/* 타임라인 내 맛집/명소 탭 바로가기 칩 링크 */
+.chip-link{
+  display:inline-flex;align-items:center;gap:3px;font-size:11.5px;font-weight:700;
+  background:var(--card);color:var(--forest);border:1.5px solid var(--green-mid);
+  border-radius:999px;padding:3px 10px;margin-top:6px;margin-right:6px;text-decoration:none;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);transition:.15s;cursor:pointer;
+}
+.chip-link:active{transform:scale(.96);background:var(--green-light)}
+
+/* ── 플로팅 모달 (상세 정보 팝업) ── */
+.modal-backdrop{
+  position:fixed;top:0;left:0;width:100%;height:100%;
+  background:rgba(18,24,20,.62);backdrop-filter:blur(5px);
+  z-index:999;opacity:0;pointer-events:none;
+  transition:opacity .2s ease;
+}
+.modal-backdrop.open{opacity:1;pointer-events:auto}
+
+.modal-dialog{
+  position:fixed;top:50%;left:50%;
+  transform:translate(-50%, -46%) scale(.96);
+  width:calc(100% - 32px);max-width:540px;max-height:86vh;
+  background:var(--card);border-radius:22px;
+  box-shadow:0 20px 50px rgba(0,0,0,.28);
+  z-index:1000;opacity:0;pointer-events:none;
+  transition:all .22s cubic-bezier(.16,1,.3,1);
+  display:flex;flex-direction:column;overflow:hidden;
+  border:1px solid rgba(44,58,47,.08);
+}
+body.dark-mode .modal-dialog{
+  border-color:rgba(226,229,216,.12);
+  box-shadow:0 20px 50px rgba(0,0,0,.6);
+}
+.modal-dialog.open{
+  opacity:1;pointer-events:auto;
+  transform:translate(-50%, -50%) scale(1);
+}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 18px 12px;border-bottom:1px solid var(--sand);
+}
+.modal-title{
+  font-size:12.5px;font-weight:800;color:var(--muted);
+  display:flex;align-items:center;gap:6px;
+}
+.modal-close{
+  width:32px;height:32px;border-radius:50%;background:var(--sand);
+  border:none;cursor:pointer;display:grid;place-items:center;
+  font-size:16px;color:var(--forest);transition:.15s;line-height:1;
+}
+.modal-close:active{transform:scale(.92)}
+body.dark-mode .modal-close{background:#232B25;color:#E2E5D8}
+.modal-body{
+  padding:18px 20px 22px;overflow-y:auto;
+}
+.modal-body .spot, .modal-body .food{
+  box-shadow:none;border:none;padding:0;margin:0;background:transparent;
+}
+.modal-body h3, .modal-body b{font-size:16.5px}
+.modal-body p, .modal-body span{font-size:13px;line-height:1.6}
+.modal-body .links-row{margin-top:14px;gap:7px}
+.modal-body .btn-link{font-size:12px;padding:7px 12px;border-radius:9px}
+
+/* 앵커 타겟 이동 시 시각적 하이라이트 애니메이션 */
+.spot:target, .food:target{
+  border:2px solid var(--accent) !important;
+  animation:highlightPulse 2s ease-out;
+}
+@keyframes highlightPulse{
+  0%{background:#FFF4E8}
+  100%{background:var(--card)}
+}
+
+/* ── 다크모드 (야간 텐트 모드) ── */
+body.dark-mode{
+  --maple:#D45B3E;
+  --maple-deep:#B84A28;
+  --amber:#F2994A;
+  --gold:#E5B864;
+  --amber-soft:#342217;
+  --forest:#18221A;
+  --forest-deep:#0F1611;
+  --forest-soft:#223126;
+  --green-mid:#445C46;
+  --green-light:#2A382D;
+  --sand:#151210;
+  --sand-deep:#221D19;
+  --charcoal:#EDE6DF;
+  --ink:#E8E2DA;
+  --muted:#9C9288;
+  --accent:var(--amber);
+  --accent-soft:var(--amber-soft);
+  --card:#1F1A17;
+  --shadow:0 3px 12px rgba(0,0,0,.5), 0 10px 28px rgba(0,0,0,.4);
+}
+body.dark-mode{
+  background-color:#13100E;
+  background-image:
+    radial-gradient(ellipse at top, rgba(242,153,74,.08) 0%, transparent 60%),
+    radial-gradient(circle at 10% 20%, rgba(212,91,62,.05) 0%, transparent 35%);
+}
+body.dark-mode header.hero{
+  background:
+    linear-gradient(180deg, rgba(15,12,10,.6) 0%, rgba(15,12,10,.85) 60%, rgba(15,12,10,.98) 100%),
+    url("hero-autumn.jpg") center center/cover no-repeat;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+body.dark-mode nav.tabs{
+  background:rgba(21,18,16,.94);
+  border-top:1px solid rgba(255,255,255,.08);
+}
+body.dark-mode nav.tabs a{
+  color:#82796F;
+}
+body.dark-mode nav.tabs a.on{
+  color:var(--amber);
+  background:rgba(242,153,74,.18);
+}
+
+.theme-btn{
+  position:absolute;top:0;right:0;z-index:20;
+  background:rgba(246,243,234,.16);border:1px solid rgba(246,243,234,.3);
+  color:#F6F3EA;border-radius:999px;padding:6px 13px;font-size:12px;font-weight:700;
+  display:inline-flex;align-items:center;gap:4px;cursor:pointer;transition:.15s;
+}
+.theme-btn:active{transform:scale(.95)}
+
+/* 아이 맞춤 편의 뱃지 */
+.baby-badges{display:flex;gap:5px;flex-wrap:wrap;margin:6px 0 8px}
+.baby-badge{
+  display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;
+  background:#EEF5F0;color:#2C5E3B;border:1px solid rgba(44,94,59,.2);
+  border-radius:6px;padding:2px 8px;line-height:1.4;
+}
+body.dark-mode .plan-tag.opt{background:rgba(217,107,39,.2);color:#F4A261;border-color:rgba(217,107,39,.4)}
+body.dark-mode .plan-tag.sub{background:rgba(45,106,79,.25);color:#74C69D;border-color:rgba(45,106,79,.4)}
+body.dark-mode .plan-tag.off{background:rgba(255,255,255,.08);color:#A8A29E;border-color:rgba(255,255,255,.15)}
+body.dark-mode .baby-badge{
+  background:#203527;color:#9BD4AA;border-color:rgba(155,212,170,.25);
+}
+.btn-link.tel{
+  background:#FFF3EB;color:#D96B27;border:1px solid rgba(217,107,39,.25);
+}
+body.dark-mode .btn-link.tel{
+  background:#382316;color:#F59E68;border-color:rgba(245,158,104,.25);
+}
+
+/* 운영시간 및 휴무일 안내 */
+.hours-info{
+  display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+  font-size:11.5px;color:var(--muted);margin:4px 0 6px;line-height:1.4;
+}
+.hours-info strong, .hours-info b{color:var(--forest);font-weight:700}
+.hours-info .closed{color:#C93B2B;font-weight:700}
+.hours-info .warn{color:#D96B27;font-weight:700}
+body.dark-mode .hours-info strong, body.dark-mode .hours-info b{color:#E2E5D8}
+body.dark-mode .hours-info .closed{color:#E57373}
+body.dark-mode .hours-info .warn{color:#FFB74D}
+
+/* ── 폴드7 펼친 대화면 / 태블릿 최적화 (min-width: 640px) ── */
+@media (min-width: 640px){
+  .wrap{max-width:860px;padding:0 24px}
+  header.hero{padding:54px 32px 38px;border-radius:0 0 34px 34px}
+  .hero h1{font-size:32px}
+  .wx-grid{grid-template-columns:repeat(3, 1fr);gap:14px}
+  .spots-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:14px}
+  .foods-grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:12px}
+  .tl{padding-left:30px}
+  .tl h4{font-size:16px}
+  .tl p{font-size:14px}
+  nav.tabs{max-width:640px}
+}
+
+footer{
+  text-align:center;font-size:12px;color:var(--muted);padding:26px 20px 10px;
+}
+
+/* ── 하단 탭 네비 ── */
+nav.tabs{
+  position:fixed;bottom:0;left:0;right:0;z-index:50;
+  background:rgba(255,255,255,.92);backdrop-filter:blur(12px);
+  border-top:1px solid rgba(0,0,0,.06);
+  padding:8px 8px calc(8px + env(safe-area-inset-bottom));
+  display:flex;max-width:520px;margin:0 auto;
+}
+nav.tabs a{
+  flex:1;text-align:center;text-decoration:none;color:#9AA091;font-size:10.5px;font-weight:700;
+  border-radius:12px;padding:6px 2px;
+}
+nav.tabs a .ic{display:block;font-size:20px;margin-bottom:2px}
+nav.tabs a.on{color:var(--maple);background:var(--amber-soft)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap" style="padding:0;position:relative">
+    <button id="themeToggle" class="theme-btn" aria-label="야간 텐트 모드 토글">🌙 야간 텐트 모드</button>
+    <span class="badge">2026. 11. 13 (금) — 11. 15 (일) · 2박 3일</span>
+    <h1>단양 한스빌리지<br>가족 캠핑 가이드
+      <small>충북 단양군 가곡면 · 한스빌리지 캠핑장 · 퇴실 일요일 16:00</small>
+    </h1>
+    <div class="crew">
+      <span>🧑 아빠</span><span>👩 엄마</span><span>🧒 아이 (만 3세)</span><span>🚙 테슬라 모델 Y 차박</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+<!-- ① 날씨 -->
+<section id="weather">
+  <div class="sec-head">
+    <span class="no">01</span><h2>날씨 &amp; 복장 전략</h2>
+    <span class="sub">11/15(일) 07시 아침 최신 조회</span>
+  </div>
+  <div class="wx-grid">
+
+    <div class="wx">
+      <div class="day"><span class="ico">🍂</span>11/13 금요일 <span class="tag">피칭 완료</span></div>
+      <div class="nums">
+        <div class="big">6<em>~15℃</em></div>
+        <div class="meta">마른 피칭 완료<br>밤새 온화 (9~10℃)<br>미세먼지 좋음</div>
+      </div>
+      <div class="strategy"><b>결과:</b> 비 없이 온화했던 마른 피칭 완료. 밤사이 기온 9~10도로 온화해 모델 Y 캠프모드 난방 부하 최소화 및 아늑한 1박 완료.</div>
+    </div>
+
+    <div class="wx rain">
+      <div class="day"><span class="ico">🌧️</span>11/14 토요일 <span class="tag">우중 데이 완료</span></div>
+      <div class="nums">
+        <div class="big">9<em>~12℃</em></div>
+        <div class="meta">종일 이슬비·가을비 · 무풍<br>아쿠아리움·구경시장 완료<br>밤새 온화 · 미세먼지 좋음</div>
+      </div>
+      <div class="strategy"><b>결과:</b> 바람 없는 우중 캠핑으로 아늑한 하루를 보낸 뒤 다누리아쿠아리움·구경시장(닭강정·마늘빵) 실내 코스를 마치고 복귀 완료.</div>
+    </div>
+
+    <div class="wx sun">
+      <div class="day"><span class="ico">🌤️</span>11/15 일요일 <span class="tag">완전 건조 &amp; 노을 뷰</span></div>
+      <div class="nums">
+        <div class="big">7<em>~16℃</em></div>
+        <div class="meta">새벽 비 그침 → 종일 강수 0%<br>14~16시 16℃ 맑음 · 바람 10 km/h<br>일몰 17:17 · 미세먼지 좋음</div>
+      </div>
+      <div class="strategy"><b>전략:</b> 비가 완전히 그치고 07시 현재 9℃(흐림), 낮 11시부터 구름 걷히며 <b>14~16시 16℃·대체로 맑음·바람 10 km/h</b>로 <b>16:00 뽀송뽀송 완전 건조 철수</b> 최적! 철수 후 16:30 카페산으로 이동해 <b>17:17 소백산 황금빛 일몰 노을</b> 완벽 감상 후 귀가.</div>
+    </div>
+
+  </div>
+  <div class="wx-rain-note">📌 <a href="https://developer.apple.com/weatherkit/data-source-attribution/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">&#xF8FF; Weather</a> 기준 11/15(일) 07시 조회 · <a href="https://www.airkorea.or.kr/" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">한국환경공단 에어코리아</a> 단양읍 미세먼지 2 (좋음) / 초미세먼지 6 (좋음).</div>
+</section>
+
+<!-- ② 일정 -->
+<section id="plan">
+  <div class="sec-head">
+    <span class="no">02</span><h2>2박 3일 타임라인</h2>
+  </div>
+  <div class="day-tabs" id="dayTabs">
+    <button data-day="d1">1일차<small>11/13 금</small></button>
+    <button data-day="d2">2일차<small>11/14 토</small></button>
+    <button data-day="d3" class="on">3일차<small>11/15 일 · 철수</small></button>
+  </div>
+
+  <div class="tl" id="d1" hidden>
+    <div class="item sunny">
+      <div class="time">10:40</div>
+      <h4>서울 서남권 출발 🚙</h4>
+      <p>서울 자택 → 영동/중부내륙/중앙고속도로. 아이와 휴게소 1회 들르며 여유롭게 이동 (약 3시간 15분 소요).</p>
+      <span class="chip">기름/공기압 체크</span><span class="chip">E3500 랜턴 완충</span>
+    </div>
+    <div class="item sunny">
+      <div class="time">14:00 ~ 14:50</div>
+      <h4>가곡면 가마골쉼터 도착 &amp; 든든한 점심 🍲</h4>
+      <p><b>가마골쉼터</b> (가곡면 새밭로, 캠핑장 3분 거리). 식객 허영만 백반기행에 방영된 옹심이 명가! 고소한 들깨감자옹심이와 겉바속쫀 감자전으로 아이와 함께 자극 없는 든든한 식사.</p>
+      <span class="chip">캠핑장 차로 3분 (1.6km)</span><span class="chip">식객 백반기행</span><span class="chip">아이 유아식 최적</span>
+      <div>
+        <a href="#food-gamagol" class="chip-link">🍲 가마골쉼터(옹심이) 상세 보기 ➔</a>
+      </div>
+    </div>
+    <div class="item sunny">
+      <div class="time">15:00 ~ 16:15</div>
+      <h4>한스빌리지 입실 &amp; 여유로운 피칭 ⛺</h4>
+      <p>식당에서 차로 단 3분 거리(1.6km) 캠핑장 도착! 완벽한 마른 피칭 — 텐트 설치 및 플라이 펙다운. 바람이 2~5km/h로 거의 무풍이라 텐트 피칭하기 최적의 조건.</p>
+      <span class="chip">강수확률 0%</span><span class="chip">무풍 2~5km/h</span><span class="chip">일몰 전 피칭 완료</span>
+      <a href="#food-hans" class="chip-link">⛺ 캠핑장 정보 ➔</a>
+    </div>
+    <div class="item">
+      <div class="time">16:20 ~ 17:15</div>
+      <h4>가대생태습지 늦가을 노을 산책 🌿</h4>
+      <p>피칭 마치고 운전·설치 피로 풀기! 캠핑장 바로 코앞 <b>가대생태습지</b>(차로 4분, 전 구간 평지 목재데크길 아이 유모차 산책)에서 17:19 일몰 골든아워의 남한강 갈대밭 힐링 산책.</p>
+      <span class="chip">가대습지 4분</span><span class="chip">평지 유모차 최적</span><span class="chip">17:19 일몰 노을</span>
+      <div>
+        <a href="#spot-gadae" class="chip-link">🌿 가대생태습지 보기 ➔</a>
+      </div>
+    </div>
+    <div class="item">
+      <div class="time">저녁</div>
+      <h4>바비큐 &amp; 가족 저녁 🔥</h4>
+      <p>코베아 큐빅 난로 + 스토브팬, 루메나 온풍기 세팅. 저녁 10도까지 내려가니 아이 발밑 난방 필수.</p>
+    </div>
+    <div class="item">
+      <div class="time">취침</div>
+      <h4>테슬라 캠프모드 22도 😴</h4>
+      <p>모델 Y 차박, 캠프모드로 밤새 22도 유지 — 일산화탄소 걱정 없는 따뜻한 잠.</p>
+      <span class="chip">캠프모드 22℃</span>
+    </div>
+  </div>
+
+  <div class="tl" id="d2" hidden>
+    <div class="item rainy">
+      <div class="time">오전</div>
+      <h4>우중 텐트 힐링 ☔</h4>
+      <p>새벽부터 약한 비가 이어짐. 아늑한 텐트 안 따뜻한 커피와 아이와 느긋한 아침. 빗소리 감상이 특권.</p>
+      <span class="chip">강수확률 96~98%</span><span class="chip">루메나 온풍기</span>
+    </div>
+    <div class="item rainy">
+      <div class="time">12:00 ~ 13:00</div>
+      <h4>단양읍 점심 식사 (마늘떡갈비 or 쌈밥) 🥩🍚</h4>
+      <p>단양읍 시내로 이동해 점심 식사. 남한강 리버뷰 통창에서 달콤하고 부드러워 아이 먹이기 최고인 <b>다원 수제 마늘떡갈비</b> 또는 푸짐한 <b>단양흑마늘쌈밥</b> 정식.</p>
+      <div>
+        <a href="#food-dawon" class="chip-link">🥩 다원 마늘떡갈비 ➔</a>
+        <a href="#food-ssambap" class="chip-link">🍚 단양흑마늘쌈밥 ➔</a>
+        <a href="#food-market" class="chip-link">🍲 구경시장 먹거리 ➔</a>
+      </div>
+    </div>
+    <div class="item rainy">
+      <div class="time">13:30 ~ 15:15</div>
+      <h4>다누리아쿠아리움 🐟</h4>
+      <p>국내 최대 민물고기 아쿠아리움, 실내라 우중 최적! 대형 터널 수조와 테마 전시 관람 후 <b>15:00 메인수조 대형 철갑상어 식사시간(피딩쇼) 관람!</b></p>
+      <span class="chip">현장 발권 · 성인 2인 상품권 1만원 페이백</span>
+      <span class="chip">🦈 15:00 메인수조(B2) 물고기 식사시간 (10분)</span>
+      <a href="#spot-aquarium" class="chip-link">🐟 아쿠아리움 상세·피딩쇼 ➔</a>
+    </div>
+    <div class="item rainy">
+      <div class="time">15:30</div>
+      <h4>단양 구경시장 투어 🧄</h4>
+      <p>아쿠아리움 바로 맞은편 도보 이동. 페이백 받은 상품권 1만원 사용!</p>
+      <div>
+        <a href="#food-danppang" class="chip-link">🥖 단빵제빵소 ➔</a>
+        <a href="#food-chicken" class="chip-link">🍗 누룽지닭강정 ➔</a>
+        <a href="#food-market" class="chip-link">🥟 구경시장 먹거리 ➔</a>
+      </div>
+    </div>
+    <div class="item rainy">
+      <div class="time">17:00 ~ 18:00</div>
+      <h4>수양개빛터널 &amp; 이끼터널 (우중 실내 야경) 🌌✨</h4>
+      <p>구경시장에서 차로 15분! 17:00 오픈에 맞춰 입장. 200m 폐터널 안 화려한 레이저·음악 미디어파사드 쇼 — 비 오는 날에도 실내에서 쾌적하게 관람하며 세 살 아이가 열광하는 환상적인 불빛 체험 (출구 길목 신비로운 이끼터널 통과).</p>
+      <span class="chip">실내 우중 최적</span><span class="chip">동절기 야간 개장</span><span class="chip">미디어아트 터널</span>
+      <div>
+        <a href="#spot-suyanggae" class="chip-link">🌌 수양개빛터널 보기 ➔</a>
+      </div>
+    </div>
+    <div class="item rainy">
+      <div class="time">저녁</div>
+      <h4>캠핑장 복귀 🏕️</h4>
+      <p>빛터널 관람 후 캠핑장으로 복귀. 낮에 포장해 둔 누룽지 닭강정과 마늘빵, 시장 음식으로 텐트 안 따뜻한 저녁. 밤까지 이슬비 이어지지만 바람 없는 온화한 날씨라 텐트 안에서 쾌적.</p>
+      <span class="chip">캠프모드 22℃</span>
+    </div>
+  </div>
+
+  <div class="tl" id="d3">
+    <div class="item sunny">
+      <div class="time">아침</div>
+      <h4>여유로운 아침 식사 ☕</h4>
+      <p>새벽 비는 그치고 하늘이 열리기 시작. 버너 올려 따뜻한 아침 준비.</p>
+      <span class="chip">09:00부터 강수 0%</span>
+    </div>
+    <div class="item sunny">
+      <div class="time">오전~오후</div>
+      <h4>텐트 완전 건조 &amp; 점심 (보리곳간 산채나물밥) 🌤️</h4>
+      <p>텐트 펼쳐 말리기 (오후 14~16시 16℃ + 대체로 맑음). 점심은 슴슴하고 건강한 산채 나물밥 <b>보리곳간</b>(캠핑장 6분) 추천!</p>
+      <span class="chip">14~16시 갬</span>
+      <div>
+        <a href="#food-bori" class="chip-link">🌾 보리곳간(산채보리밥) ➔</a>
+      </div>
+    </div>
+    <div class="item sunny">
+      <div class="time">16:00</div>
+      <h4>뽀송뽀송 완전 건조 철수 ✨</h4>
+      <p>퇴실 16:00. 젖은 장비 하나 없이 깔끔하게 수납 — 이번 캠핑의 최대 행운.</p>
+    </div>
+    <div class="item sunny">
+      <div class="time">16:30 ~ 17:40</div>
+      <h4>카페산 해발 600m 황금 노을 뷰 티타임 (17:17 일몰) 🌅☕</h4>
+      <p><b>최고의 피날레: 카페산 (CAFE SANN)</b> — 16:00 퇴실 후 차로 18분 이동(16:25 도착). 맑게 갠 일요일 하늘 아래 해발 600m 두산활공장에서 <b>17:17 일몰 골든아워</b>를 만끽하며 남한강과 소백산 자락을 붉게 물들이는 환상적인 가을 노을 직관! 커피와 베이커리 즐기며 캠핑 마무리 후 18:00경 여유롭게 귀가.<br><b>대안: 도담삼봉 &amp; 석문</b> — 북단양IC 진입 길목이라 이동 동선 최적 (상시 개방).</p>
+      <span class="chip">🌅 17:17 일몰 골든아워</span><span class="chip">해발 600m 노을 뷰</span><span class="chip">퇴실 후 18분</span>
+      <div>
+        <a href="#food-cafesann" class="chip-link">☕ 카페산 노을 뷰 보기 ➔</a>
+        <a href="#spot-dodam" class="chip-link">⛰️ 도담삼봉 보기 ➔</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 체크리스트 -->
+<section id="checklist">
+  <div class="sec-head">
+    <span class="no">03</span><h2>챙길 것 체크리스트</h2>
+    <span class="sub">체크는 자동 저장돼요</span>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div id="pbar"></div></div>
+    <span class="progress-num" id="pnum">0%</span>
+    <button class="reset-btn" id="resetBtn">초기화</button>
+  </div>
+  <div id="ckList"></div>
+
+  <!-- 테슬라 모델 Y 캠프모드 & 충전 전략 카드 -->
+  <div class="tip" style="margin-top:18px;border-style:solid;border-color:var(--amber);background:linear-gradient(135deg,#FFFDF9,#FAF2E6)">
+    <div style="display:flex;align-items:center;gap:8px;font-size:15px;font-weight:800;color:var(--maple);margin-bottom:8px">
+      <span style="font-size:20px">⚡</span> 테슬라 모델 Y 캠프모드 &amp; 단양 수퍼차저 플래닝
+    </div>
+    <div style="font-size:13px;color:var(--charcoal);line-height:1.6">
+      <p>• <b>주행 소모</b>: 서울 자택 ➔ 단양 한스빌리지(약 175km) 주행 시 약 <b>35~40% 소모</b> (100% 완충 출발 권장, 도착 시 60~65% 잔여).</p>
+      <p style="margin-top:4px">• <b>캠프모드(2박) 소모</b>: 야간 외기온 6~10℃ 기준, 실내 22℃ 유지 시 1박(8시간)당 약 12% × 2박 = <b>약 24% 소모</b>. 현지 이동 8% 포함 체류 중 총 32% 전력 필요.</p>
+      <p style="margin-top:4px">• <b>단양 복귀 충전 스팟</b>:<br>
+        ① <b>제천 수퍼차저 (V3)</b>: 제천 IC 인근(단양 진입 전/후 25분), 15분 만에 50% 급속 충전(85% 이상 확보).<br>
+        ② <b>단양 구경시장 공영주차장</b>: 2일차 아쿠아리움·시장 투어(3시간) 동안 환경부 급속/완속 충전기 이용.
+      </p>
+      <p style="margin-top:6px;font-size:12px;color:var(--muted)">⚠️ <b>주의</b>: 한스빌리지 캠핑장 사이트 분전반(600W 제한)에 모바일 커넥터(3kW) 직결 금지 (차단기 트립 발생).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ④ 명소 -->
+<section id="spots">
+  <div class="sec-head">
+    <span class="no">04</span><h2>주변 명소 &amp; 관광지</h2>
+  </div>
+
+  <div class="spots-grid">
+    <div class="spot" id="spot-aquarium">
+      <div class="emo">🐟</div>
+      <div style="flex:1">
+        <h3>다누리아쿠아리움 <span class="pill rain">우중 최적</span> <span class="plan-tag on">📍 2일차 13:30 일정</span></h3>
+        <div class="hours-info">
+          <span>⏰ <b>09:00 ~ 18:00</b> (매표 마감 17:00)</span>
+          <span class="closed">매주 월요일 정기휴관</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 유모차 편안 (대여·EV)</span>
+          <span class="baby-badge">🍼 수유실·기저귀교환대 완비</span>
+        </div>
+        <p>국내 최대 민물고기 수조를 자랑하는 실내 아쿠아리움. 비 오는 토요일 우중 최적 코스. <b>매주 토요일 15:00 지하 2층 메인수조(높이 8m 대형수조) 대형 철갑상어 물고기 식사시간 피딩쇼 진행!</b> (약 10분간) 현장 매표 발권 시 성인 1인당 단양사랑상품권 5,000원 페이백(총 1만원) 혜택.</p>
+        <div class="links-row">
+          <a href="tel:043-420-2971" class="btn-link tel">📞 안내문의 (043-420-2971)</a>
+          <a href="https://map.naver.com/p/search/단양 다누리아쿠아리움" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://www.danyang.go.kr/aquarium/" target="_blank" class="btn-link official">🏛️ 공식사이트</a>
+          <a href="https://search.naver.com/search.naver?query=단양+다누리아쿠아리움+후기" target="_blank" class="btn-link blog">📝 방문후기</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot" id="spot-dodam">
+      <div class="emo">⛰️</div>
+      <div style="flex:1">
+        <h3>도담삼봉 &amp; 석문 <span class="pill">단양 1경</span> <span class="plan-tag on">📍 3일차 귀가길 일정</span></h3>
+        <div class="hours-info">
+          <span>⏰ <b>공원·주차장 상시 개방</b> (유람선·체험 09:00~18:00)</span>
+          <span>연중무휴</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 광장 평지 유모차 가능 (석문 오르막 계단은 유모차 비추)</span>
+        </div>
+        <p>남한강에 솟은 신비로운 세 개의 봉우리. 북단양IC 고속도로 올리는 길목에 있어 일요일 철수 후 들르기에 동선 낭비가 전혀 없어요.</p>
+        <div class="links-row">
+          <a href="https://map.naver.com/p/search/단양 도담삼봉" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://www.danyang.go.kr/tour/1435" target="_blank" class="btn-link official">🏛️ 단양관광</a>
+          <a href="https://search.naver.com/search.naver?query=단양+도담삼봉+후기" target="_blank" class="btn-link blog">📝 방문후기</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot" id="spot-skywalk">
+      <div class="emo">🌤️</div>
+      <div style="flex:1">
+        <h3>만천하스카이워크 &amp; 단양강잔도 <span class="pill">전망대</span> <span class="plan-tag off">⚠️ 16시 마감 (조기퇴실 시)</span></h3>
+        <div class="hours-info">
+          <span>⏰ <b>09:00 ~ 17:00</b> (<span class="warn">현장발권 16:00 마감!</span>)</span>
+          <span class="closed">매주 화요일 정기휴장</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 전망대 나선형 슬로프 &amp; 잔도 평지데크 유모차 통행 가능</span>
+          <span class="baby-badge" style="background:#FFF3EB;color:#D96B27;border-color:rgba(217,107,39,.25)">⚠️ 일요일 16:00 발권 마감 주의 (15:30 전 도착 필수)</span>
+        </div>
+        <p>남한강 절벽 80~90m 상공을 걷는 유리 전망대와 강변 암벽을 따라 1.2km 이어지는 단양강잔도길! 아이와 평지 데크 산책하기 좋습니다.</p>
+        <div class="links-row">
+          <a href="https://map.naver.com/p/search/만천하스카이워크" target="_blank" class="btn-link naver">🗺️ 스카이워크 지도</a>
+          <a href="https://map.naver.com/p/search/단양강잔도" target="_blank" class="btn-link naver">🗺️ 잔도 지도</a>
+          <a href="https://www.mancheonha.com/" target="_blank" class="btn-link official">🏛️ 공식사이트</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot" id="spot-ondal">
+      <div class="emo">🏰</div>
+      <div style="flex:1">
+        <h3>온달관광지 &amp; 온달동굴 <span class="pill">캠핑장 인근 15분</span> <span class="plan-tag opt">💡 1일차 피칭 후 (대안)</span></h3>
+        <div class="hours-info">
+          <span>⏰ <b>09:00 ~ 18:00</b> (매표 마감 17:00)</span>
+          <span>연중무휴</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 세트장 유모차 가능 (동굴 내부는 좁아 진입 불가)</span>
+        </div>
+        <p>가곡면 한스빌리지에서 북쪽으로 15분(영춘면). 고구려 온달산성 드라마 오픈세트장과 사계절 온화한 천연 석회암 온달동굴 관람.</p>
+        <div class="links-row">
+          <a href="https://map.naver.com/p/search/온달관광지" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://www.danyang.go.kr/tour/1442" target="_blank" class="btn-link official">🏛️ 단양관광</a>
+          <a href="https://search.naver.com/search.naver?query=단양+온달관광지+후기" target="_blank" class="btn-link blog">📝 방문후기</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot" id="spot-gosu">
+      <div class="emo">🕳️</div>
+      <div style="flex:1">
+        <h3>고수동굴 <span class="pill">천연기념물</span> <span class="plan-tag off">자유 방문 (계단 주의)</span></h3>
+        <div class="hours-info">
+          <span>⏰ <b>09:00 ~ 17:30</b> (입장 마감 16:30)</span>
+          <span>연중무휴</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge" style="background:#FFF0F0;color:#C93B2B;border-color:rgba(201,59,43,.2)">⚠️ 계단·좁은 바위 통로 (유모차 불가)</span>
+        </div>
+        <p>4억 년 된 신비로운 자연동굴. 실내 관광지이지만 계단과 좁은 통로가 있어 아이 눈높이에는 아쿠아리움이 더 편안합니다.</p>
+        <div class="links-row">
+          <a href="https://map.naver.com/p/search/고수동굴" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="http://www.gosucave.co.kr/" target="_blank" class="btn-link official">🏛️ 공식사이트</a>
+          <a href="https://search.naver.com/search.naver?query=단양+고수동굴+후기" target="_blank" class="btn-link blog">📝 방문후기</a>
+        </div>
+      </div>
+    </div>
+    <div class="spot" id="spot-suyanggae">
+      <div class="emo">🌌</div>
+      <div style="flex:1">
+        <h3>수양개빛터널 &amp; 이끼터널 <span class="pill rain">실내 야경</span> <span class="plan-tag on">📍 2일차 17:00 일정</span></h3>
+        <div class="hours-info">
+          <span>⏰ <b>동절기(11월) 14:00 ~ 21:50</b> (매표 마감 21:00)</span>
+          <span class="closed">매주 화요일 정기휴무</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 실내 터널 유모차 통행 가능</span>
+          <span class="baby-badge">🌧️ 비 오는 날 최적 (실내 200m 미디어아트)</span>
+        </div>
+        <p>일제강점기 방치된 길이 200m 터널을 최첨단 영상, 음향, 레이저 LED 미디어파사드로 탈바꿈시킨 단양 야간 1위 랜드마크! 어두운 터널 속 화려한 불빛 쇼에 세 살 아이가 열광합니다. 진입로에 초록 이끼가 벽면을 덮은 신비로운 이끼터널 포토존도 함께 지나갑니다 (적성면 수양개유적로 390).</p>
+        <div class="links-row">
+          <a href="tel:043-421-5454" class="btn-link tel">📞 문의 (043-421-5454)</a>
+          <a href="https://map.naver.com/p/search/수양개빛터널" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="http://www.ledtunnel.co.kr/" target="_blank" class="btn-link official">🏛️ 공식홈페이지</a>
+          <a href="https://search.naver.com/search.naver?query=단양+수양개빛터널+후기" target="_blank" class="btn-link blog">📝 방문후기</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot" id="spot-gadae">
+      <div class="emo">🌿</div>
+      <div style="flex:1">
+        <h3>가대생태습지 <span class="pill">캠핑장 4분</span> <span class="plan-tag on">📍 1일차 16:20 피칭 후 노을 산책</span></h3>
+        <div class="hours-info">
+          <span>⏰ <b>상시 개방</b> (입장료 무료)</span>
+          <span>연중무휴</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 전 구간 평지 목재데크 (유모차 100% 최적)</span>
+          <span class="baby-badge">🌾 늦가을 남한강 갈대·억새 힐링 산책</span>
+        </div>
+        <p>한스빌리지 캠핑장에서 차로 딱 4분 거리! 남한강변 자연 습지를 따라 완만한 나무 데크길이 조성된 숨은 힐링 명소입니다. 관광객이 붐비지 않아 한적하고, 유모차 끌고 30분가량 가볍게 산책하며 운전·피칭 피로를 풀기에 최고입니다 (가곡면 가대리 1098).</p>
+        <div class="links-row">
+          <a href="https://map.naver.com/p/search/가대생태습지" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://www.danyang.go.kr/tour/1454" target="_blank" class="btn-link official">🏛️ 단양관광</a>
+          <a href="https://search.naver.com/search.naver?query=단양+가대생태습지+후기" target="_blank" class="btn-link blog">📝 방문후기</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="spot" id="spot-bobal">
+      <div class="emo">🍁</div>
+      <div style="flex:1">
+        <h3>보발재 전망대 <span class="pill">드라이브</span> <span class="plan-tag off">자유 드라이브 (캠핑장 15분)</span></h3>
+        <div class="hours-info">
+          <span>⏰ <b>상시 개방</b> (전망 데크)</span>
+          <span>연중무휴</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">🚗 소백산 자락 굽이치는 S자 고갯길 뷰</span>
+        </div>
+        <p>가곡면 보발리와 영춘면 백자리(구인사)를 잇는 해발 540m 고갯길 전망대. 굽이굽이 낭만적인 늦가을 단풍길 드라이브 명소로 전국 사진작가들이 찾는 뷰포인트입니다 (가곡면 보발리 산 14-3).</p>
+        <div class="links-row">
+          <a href="https://map.naver.com/p/search/단양+보발재전망대" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://search.naver.com/search.naver?query=단양+보발재+단풍+후기" target="_blank" class="btn-link blog">📝 드라이브후기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ⑤ 맛집 -->
+<section id="food">
+  <div class="sec-head">
+    <span class="no">05</span><h2>단양 맛집 &amp; 구경시장 가이드</h2>
+    <span class="sub">네이버지도 즐겨찾기 연동</span>
+  </div>
+
+  <div class="foods-grid">
+    <div class="food" id="food-ssambap">
+      <span class="emo">🍚</span>
+      <div style="flex:1">
+        <b>단양흑마늘쌈밥 <span class="pill">단양읍</span> <span class="plan-tag on">📍 1일차 점심 후보</span></b>
+        <div class="hours-info">
+          <span>⏰ <b>11:00 ~ 20:00</b> (브레이크타임 15:00~16:30, L.O 19:15)</span>
+          <span class="closed">매주 목요일 정기휴무</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 온가족 추천 (부드러운 마늘수육 정식)</span>
+        </div>
+        <span>마늘수육·제육 쌈밥 정식 — 온 가족 건강하고 든든한 한식 한상 (단양읍 별곡리 543)</span>
+        <div class="links-row">
+          <a href="tel:0507-1447-0627" class="btn-link tel">📞 전화문의 (0507-1447-0627)</a>
+          <a href="https://map.naver.com/p/search/단양흑마늘쌈밥" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://search.naver.com/search.naver?query=단양흑마늘쌈밥+후기" target="_blank" class="btn-link blog">📝 블로그리뷰</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="food" id="food-gamagol">
+      <span class="emo">🍲</span>
+      <div style="flex:1">
+        <b>가마골쉼터 <span class="pill">가곡면 · 캠핑장 3분</span> <span class="plan-tag on">📍 1일차 14:00 점심 확정</span></b>
+        <div class="hours-info">
+          <span>⏰ <b>11:30 ~ 19:00</b> (L.O 18:00, 주문 즉시 옹심이 조리)</span>
+          <span class="closed">매주 목요일 정기휴무 (금~일 정상영업)</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 자극 없는 유아 식사 (들깨감자옹심이·감자전)</span>
+        </div>
+        <span>들깨감자옹심이 · 칼국수 · 감자전 — 식객 허영만 백반기행 맛집! 한스빌리지와 같은 새밭로(1.6km, 차로 3분)라 동선 완벽. 자극 없이 고소해 아이 먹이기 최고 (목 휴무, 금~일 정상영업)</span>
+        <div class="links-row">
+          <a href="tel:043-423-5240" class="btn-link tel">📞 전화문의 (043-423-5240)</a>
+          <a href="https://map.naver.com/p/search/가마골쉼터" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://search.naver.com/search.naver?query=단양+가마골쉼터+백반기행+후기" target="_blank" class="btn-link blog">📝 백반기행리뷰</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="food" id="food-cafesann">
+      <span class="emo">☕</span>
+      <div style="flex:1">
+        <b>카페산 (CAFE SANN) <span class="pill">가곡면 · 뷰카페</span> <span class="plan-tag on">📍 3일차 16:30 일몰 노을 뷰</span></b>
+        <div class="hours-info">
+          <span>⏰ <b>평일 09:30~19:00</b> (L.O 18:30) / <b>주말 09:30~19:30</b> (L.O 19:00)</span>
+          <span>연중무휴</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">⛰️ 해발 600m 패러글라이딩 활공장 파노라마 뷰</span>
+          <span class="baby-badge">🥐 대형 베이커리 &amp; 로스터리 (블루리본 선정)</span>
+          <span class="baby-badge">👶 야외 테라스 인생샷 (절벽 난간 보호자 동반 주의)</span>
+        </div>
+        <span>단양 독보적 1위 랜드마크 대형 뷰 카페! 해발 600m 두산활공장 정상에서 굽이치는 남한강 사행천과 소백산을 한눈에 내려다보고, 눈앞에서 날아오르는 패러글라이딩을 직관하는 환상적인 뷰. 캠핑장(가곡면)과 차로 18분 거리! 당일 구운 크로와상·케이크 베이커리와 커피 (가곡면 두산길 196-86 · 옆에 도깨비카페 위치)</span>
+        <div class="links-row">
+          <a href="tel:1644-4674" class="btn-link tel">📞 전화문의 (1644-4674)</a>
+          <a href="https://map.naver.com/p/search/단양+카페산" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="http://sann.co.kr/" target="_blank" class="btn-link official">🏛️ 공식홈페이지</a>
+          <a href="https://search.naver.com/search.naver?query=단양+카페산+후기" target="_blank" class="btn-link blog">📝 블로그리뷰</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="food" id="food-chicken">
+      <span class="emo">🍗</span>
+      <div style="flex:1">
+        <b>단양흑마늘누룽지닭강정 <span class="pill">구경시장</span> <span class="plan-tag on">📍 2일차 15:30 포장 (토 저녁)</span></b>
+        <div class="hours-info">
+          <span>⏰ <b>10:00 ~ 20:00</b> (L.O 19:30, 재료 소진 시 조기마감)</span>
+          <span>연중무휴</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge" style="background:#FFF3EB;color:#D96B27;border-color:rgba(217,107,39,.25)">⚠️ 토요일 대기 1~2시간 필수 (오전 10시 전화예약 권장)</span>
+        </div>
+        <span>흑마늘 특제 양념에 바삭한 누룽지가 듬뿍 올라간 단양 명물 닭강정 (구경시장 607)</span>
+        <div class="links-row">
+          <a href="tel:043-422-3345" class="btn-link tel">📞 포장예약 (043-422-3345)</a>
+          <a href="https://map.naver.com/p/search/단양흑마늘누룽지닭강정" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://search.naver.com/search.naver?query=단양흑마늘누룽지닭강정+후기" target="_blank" class="btn-link blog">📝 블로그리뷰</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="food" id="food-danppang">
+      <span class="emo">🥖</span>
+      <div style="flex:1">
+        <b>단빵제빵소 <span class="pill">구경시장</span> <span class="plan-tag on">📍 2일차 15:30 포장 (토 간식)</span></b>
+        <div class="hours-info">
+          <span>⏰ <b>10:30 ~ 21:00</b> (L.O 19:30, 빵 소진 시 마감)</span>
+          <span>연중무휴</span>
+        </div>
+        <span>겉바속촉 4가지 크림치즈 바게트 마늘빵 — 줄 서서 먹는 구경시장 대표 빵집 (구경시장 613)</span>
+        <div class="links-row">
+          <a href="https://map.naver.com/p/search/단빵제빵소" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://search.naver.com/search.naver?query=단양+단빵제빵소+마늘빵+후기" target="_blank" class="btn-link blog">📝 블로그리뷰</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="food" id="food-market">
+      <span class="emo">🥟</span>
+      <div style="flex:1">
+        <b>단양구경시장 먹거리 <span class="pill">시장 투어</span> <span class="plan-tag on">📍 2일차 15:30 투어 포함</span></b>
+        <div class="hours-info">
+          <span>⏰ <b>09:00 ~ 20:00</b> (점포별 상이)</span>
+          <span>상설시장 연중무휴</span>
+        </div>
+        <span>새우마늘만두, 떡갈비만두, 달동네순대 마늘순대국밥 — 토요일 15:30 시장 투어 (도전리 615)</span>
+        <div class="links-row">
+          <a href="https://map.naver.com/p/search/단양구경시장" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://search.naver.com/search.naver?query=단양구경시장+먹거리+맛집+후기" target="_blank" class="btn-link blog">📝 시장먹거리리뷰</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="food" id="food-hans">
+      <span class="emo">⛺</span>
+      <div style="flex:1">
+        <b>한스빌리지 캠핑장 <span class="pill">숙소</span> <span class="plan-tag on">📍 1일차 저녁 바비큐 &amp; 2박</span></b>
+        <div class="hours-info">
+          <span>⏰ <b>입실 13:00~14:00</b> / <b>퇴실 16:00</b> (레이트 체크아웃)</span>
+          <span>매너타임 22:00</span>
+        </div>
+        <span>우리 가족 2박 3일 캠핑 베이스캠프 (단양군 가곡면 대대리 147)</span>
+        <div class="links-row">
+          <a href="tel:010-9493-5288" class="btn-link tel">📞 관리실 (010-9493-5288)</a>
+          <a href="https://map.naver.com/p/search/한스빌리지캠핑장" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://cafe.naver.com/hansvillage" target="_blank" class="btn-link official">🏛️ 공식카페</a>
+          <a href="https://search.naver.com/search.naver?query=단양+한스빌리지캠핑장+후기" target="_blank" class="btn-link blog">📝 캠핑후기</a>
+        </div>
+      </div>
+    </div>
+    <div class="food" id="food-bori">
+      <span class="emo">🌾</span>
+      <div style="flex:1">
+        <b>보리곳간 <span class="pill">가곡면 · 캠핑장 6분</span> <span class="plan-tag on">📍 3일차 점심 후보 (추천)</span></b>
+        <div class="hours-info">
+          <span>⏰ <b>10:00 ~ 19:00</b> (L.O 18:40)</span>
+          <span>명절(신정·설·추석) 당일 외 연중무휴</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 슴슴한 제철 나물 &amp; 두부·계란 (아이 맞춤)</span>
+          <span class="baby-badge">🏅 단양군청 공무원 단골 1위 로컬 한식</span>
+        </div>
+        <span>직접 채취한 제철 산나물 6종과 구수한 청국장/된장찌개, 산채보리밥 정식(10,000원)과 곳간정식(보리밥+도토리묵+제육볶음 15,000원). 조미료 없이 간이 삼삼해 아이 밥 챙기기 최고 (가곡면 사평3길 6-1 · 매장 앞 무료주차)</span>
+        <div class="links-row">
+          <a href="tel:043-422-5860" class="btn-link tel">📞 전화문의 (043-422-5860)</a>
+          <a href="https://map.naver.com/p/search/단양+보리곳간" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://search.naver.com/search.naver?query=단양+보리곳간+후기" target="_blank" class="btn-link blog">📝 블로그리뷰</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="food" id="food-dawon">
+      <span class="emo">🥩</span>
+      <div style="flex:1">
+        <b>다원 <span class="pill">단양읍 · 리버뷰</span> <span class="plan-tag on">📍 2일차 점심 후보 (아이 추천)</span></b>
+        <div class="hours-info">
+          <span>⏰ <b>11:30 ~ 20:30</b> (준비시간 14:45~17:30, L.O 19:45)</span>
+          <span>설·추석 당일 외 연중무휴</span>
+        </div>
+        <div class="baby-badges">
+          <span class="baby-badge">👶 달콤부드러운 수제 마늘떡갈비 (아이 최애 반찬)</span>
+          <span class="baby-badge">🪑 아기의자 &amp; 유아용 식기 완비</span>
+          <span class="baby-badge">🌊 남한강 파노라마 통창 리버뷰</span>
+        </div>
+        <span>남한강이 한눈에 내려다보이는 통창에서 즐기는 전통 수제 마늘떡갈비 전문점. 한우와 한돈에 마늘을 다져 넣어 잡내 없이 달콤하고 부드러워 세 살 아이 밥도둑입니다 (단양읍 삼봉로 172 · 주차 가능)</span>
+        <div class="links-row">
+          <a href="tel:0507-1406-8050" class="btn-link tel">📞 전화문의 (0507-1406-8050)</a>
+          <a href="https://map.naver.com/p/search/단양+다원" target="_blank" class="btn-link naver">🗺️ 네이버지도</a>
+          <a href="https://search.naver.com/search.naver?query=단양+다원+마늘떡갈비+후기" target="_blank" class="btn-link blog">📝 떡갈비리뷰</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="tip">💡 <b>꿀팁:</b> 아쿠아리움에서 받은 <b>단양사랑상품권(1인당 5천원, 총 1만원)</b>은 구경시장 닭강정, 마늘빵, 식당 등에서 현금처럼 바로 사용하실 수 있어요!</div>
+
+  <div style="margin-top:14px;text-align:center">
+    <a href="https://naver.me/x4lf1GgH" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#03C75A;color:#fff;text-decoration:none;font-weight:700;font-size:14px;padding:12px 20px;border-radius:12px;box-shadow:var(--shadow)">
+      <span style="font-size:16px">🗺️</span> 단양 네이버 지도 즐겨찾기 전체 폴더 열기
+    </a>
+  </div>
+</section>
+
+<footer>
+  단양 한스빌리지 가족 캠핑 가이드 · 2026.11.13–15<br>
+  예보는 변할 수 있으니 출발 전 다시 확인하세요 🏕️
+</footer>
+
+</div>
+
+<nav class="tabs" id="tabbar">
+  <a href="#weather" class="on"><span class="ic">🌤️</span>날씨</a>
+  <a href="#plan"><span class="ic">🗓️</span>일정</a>
+  <a href="#checklist"><span class="ic">✅</span>체크</a>
+  <a href="#spots"><span class="ic">⛰️</span>명소</a>
+  <a href="#food"><span class="ic">🧄</span>맛집</a>
+</nav>
+
+<!-- 플로팅 모달 (일정 링크 팝업) -->
+<div class="modal-backdrop" id="modalBackdrop"></div>
+<div class="modal-dialog" id="floatingModal" role="dialog" aria-modal="true">
+  <div class="modal-head">
+    <span class="modal-title">📍 장소 상세 안내</span>
+    <button class="modal-close" id="modalClose" aria-label="닫기">✕</button>
+  </div>
+  <div class="modal-body" id="modalBody"></div>
+</div>
+
+<script>
+/* ── 체크리스트 데이터 ── */
+const CK = [
+  {cat:"🧒 아이", items:[
+    ["우비","아이용, 미리 꺼내두기"],
+    ["장화","웅덩이 통과 필수템"],
+    ["여벌옷 3벌","비 맞으면 갈아입히기"],
+    ["플리스/방한복","밤 7도 대비"],
+    ["비상약","해열제·연고·밴드"],
+    ["장난감","차박 텐트 안 놀이용"],
+  ]},
+  {cat:"🔥 난방 & 전기", items:[
+    ["테슬라 모델 Y 차박","캠프모드 22도 유지"],
+    ["루메나 온풍기","거실 발밑 국소 난방"],
+    ["코베아 큐빅 난로 + 스토브팬","전기 없이 무연 난방"],
+    ["E3500 스마트 랜턴","완충 필수 (도착했어요!)"],
+    ["서브 랜턴/보조배터리","보조 라이트"],
+  ]},
+  {cat:"☔ 우중 캠핑", items:[
+    ["초대형 비닐 봉투","우중 철수 대비"],
+    ["막타올 여러 장","바닥 물 제거용"],
+    ["방수포","장비 커버"],
+    ["우산","이동 시"],
+  ]},
+  {cat:"🍳 취사", items:[
+    ["코펠 세트","4인용"],
+    ["버너","아침 조리"],
+    ["토치","불 붙이기"],
+    ["식기류","개인 식기"],
+    ["릴선","물 관리"],
+  ]},
+];
+
+const KEY = "danyang-camping-ck-v1";
+let saved = {};
+try { saved = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e){ saved = {}; }
+
+const list = document.getElementById("ckList");
+let html = "";
+CK.forEach((g,gi)=>{
+  html += `<div class="ck-cat"><h3>${g.cat}</h3>`;
+  g.items.forEach((it,ii)=>{
+    const id = `ck-${gi}-${ii}`;
+    const on = saved[id] ? "checked" : "";
+    html += `<label class="ck"><input type="checkbox" id="${id}" ${on}>
+      <span class="box">✓</span>
+      <span class="label">${it[0]}<small>${it[1]}</small></span></label>`;
+  });
+  html += `</div>`;
+});
+list.innerHTML = html;
+
+const pbar = document.getElementById("pbar"), pnum = document.getElementById("pnum");
+function updateProgress(){
+  const boxes = [...list.querySelectorAll("input")];
+  const done = boxes.filter(b=>b.checked).length;
+  const pct = boxes.length ? Math.round(done/boxes.length*100) : 0;
+  pbar.style.width = pct + "%";
+  pnum.textContent = `${done}/${boxes.length} · ${pct}%`;
+}
+list.addEventListener("change", e=>{
+  if(e.target.type === "checkbox"){
+    saved[e.target.id] = e.target.checked;
+    try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(err){}
+    updateProgress();
+  }
+});
+document.getElementById("resetBtn").addEventListener("click", ()=>{
+  if(!confirm("체크를 모두 지울까요?")) return;
+  saved = {};
+  try{ localStorage.removeItem(KEY); }catch(e){}
+  list.querySelectorAll("input").forEach(b=>b.checked=false);
+  updateProgress();
+});
+updateProgress();
+
+/* ── 일정 탭 ── */
+const tabs = document.querySelectorAll("#dayTabs button");
+tabs.forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    tabs.forEach(b=>b.classList.remove("on"));
+    btn.classList.add("on");
+    ["d1","d2","d3"].forEach(id=>{
+      document.getElementById(id).hidden = (id !== btn.dataset.day);
+    });
+  });
+});
+
+/* ── 하단 탭 하이라이트 (스크롤 스파이) ── */
+const secs = ["weather","plan","checklist","spots","food"];
+const links = [...document.querySelectorAll("#tabbar a")];
+addEventListener("scroll", ()=>{
+  let cur = secs[0];
+  for(const s of secs){
+    if (document.getElementById(s).getBoundingClientRect().top <= 120) cur = s;
+  }
+  links.forEach(a=>a.classList.toggle("on", a.getAttribute("href") === "#"+cur));
+},{passive:true});
+
+/* ── 야간 텐트 모드 (다크 모드) ── */
+const themeToggle = document.getElementById("themeToggle");
+if (localStorage.getItem("danyang_dark") === "true") {
+  document.body.classList.add("dark-mode");
+  if (themeToggle) themeToggle.innerHTML = "☀️ 주간 모드";
+}
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("danyang_dark", isDark ? "true" : "false");
+    themeToggle.innerHTML = isDark ? "☀️ 주간 모드" : "🌙 야간 텐트 모드";
+  });
+}
+
+/* ── 플로팅 모달 (일정 링크 터치 시 소스 중복 없이 해당 요소 팝업) ── */
+const backdrop = document.getElementById("modalBackdrop");
+const modal = document.getElementById("floatingModal");
+const modalBody = document.getElementById("modalBody");
+const modalClose = document.getElementById("modalClose");
+
+function openModal(targetEl) {
+  if (!targetEl) return;
+  // 소스코드 중복 없이 원본 요소의 내용을 그대로 모달에 복제
+  modalBody.innerHTML = targetEl.innerHTML;
+  backdrop.classList.add("open");
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  backdrop.classList.remove("open");
+  modal.classList.remove("open");
+  document.body.style.overflow = "";
+  setTimeout(() => { modalBody.innerHTML = ""; }, 220);
+}
+
+backdrop.addEventListener("click", closeModal);
+modalClose.addEventListener("click", closeModal);
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+});
+
+// 일정 내 모든 칩 링크 가로채기 (페이지 스크롤 대신 플로팅 창 띄움)
+document.querySelectorAll(".chip-link").forEach(link => {
+  link.addEventListener("click", e => {
+    const href = link.getAttribute("href");
+    if (!href || !href.startsWith("#")) return;
+    const target = document.querySelector(href);
+    if (target && (target.classList.contains("spot") || target.classList.contains("food"))) {
+      e.preventDefault();
+      openModal(target);
+    }
+  });
+});
+</script>
+</body>
+</html>
